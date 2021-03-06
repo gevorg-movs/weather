@@ -30,7 +30,8 @@ export default {
     data() {
         return {
             loading: false,
-            data: null
+            data: null,
+            error: null
         }
     },
     methods: {
