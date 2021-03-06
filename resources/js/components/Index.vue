@@ -41,8 +41,8 @@ export default {
             if (city.includes(',')) {
                 city = city.split(',')[0]
             }
-            let response = await fetch(`/api/getWeatherInCity?city=${city}`);
-            let weatherInfo = await response.json()
+            const response = await fetch(`/api/getWeatherInCity?city=${city}`);
+            const weatherInfo = await response.json()
             if (response.ok) {
                 this.error = null
                 this.data = [weatherInfo]

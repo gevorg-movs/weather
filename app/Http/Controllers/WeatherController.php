@@ -19,7 +19,7 @@ class WeatherController extends Controller
             return response()->json($validator->errors());
         }
 
-        $api_key = '9bd547247dc8ede6ebf511cbec0becc3';
+        $api_key = config('app.weather_key');
         $url = "https://api.openweathermap.org/data/2.5/weather?q=$request->city&appid=$api_key";
 
         $response = Http::get($url);
